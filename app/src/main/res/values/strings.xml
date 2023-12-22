@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GoQuiz</string>
+    <string name="rules">Bạn yêu thích kiến thức và muốn thử thách bản thân với những câu hỏi hấp dẫn? Bạn muốn tìm hiểu thêm về các lĩnh vực khác nhau như Lịch sử, Địa lý, Khoa học, Nghệ thuật, …? Bạn muốn cùng bạn bè và người thân tham gia vào một trò chơi vui nhộn và bổ ích? Hãy đến với GoQuiz - ứng dụng và trò chơi trắc nghiệm đa dạng và thú vị!\nGoQuiz là một ứng dụng và trò chơi trắc nghiệm trực tuyến, cho phép bạn trả lời các câu hỏi theo nhiều chủ đề khác nhau. Bạn có thể chọn chủ đề mình yêu thích hoặc muốn tìm hiểu thêm, và trả lời các câu hỏi ở hai cấp độ là dễ và khó. Mỗi câu hỏi đều có bốn lựa chọn, và bạn chỉ có một lần chọn đáp án. Bạn sẽ được tính điểm dựa trên số câu trả lời đúng.\nGoQuiz là một ứng dụng và trò chơi hoàn toàn miễn phí, dễ sử dụng và thân thiện với người dùng. Bạn chỉ cần tải ứng dụng về điện thoại hoặc máy tính của mình, đăng ký một tài khoản, và bắt đầu chơi ngay. GoQuiz sẽ mang đến cho bạn những giây phút thư giãn và học hỏi bổ ích. Hãy cùng GoQuiz khám phá thế giới kiến thức và tận hưởng niềm vui của trò chơi trắc nghiệm!</string>
+    <string-array name="categories">
+        <item name="math">Toán học</item>
+        <item name="physic">Vật lý</item>
+        <item name="chemis">Hóa học</item>
+        <item name="bio">Sinh học</item>
+        <item name="his">Lịch sử</item>
+        <item name="geo">Địa lý</item>
+        <item name="tech">Công nghệ</item>
+        <item name="astra">Thiên văn học</item>
+        <item name="all">Tất cả</item>
+    </string-array>
+</resources>
