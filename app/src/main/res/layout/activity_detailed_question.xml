@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,7 +20,9 @@
         android:gravity="center_horizontal"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:layout_marginTop="70dp"/>
+        android:layout_marginTop="70dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <Button
         android:id="@+id/DoKho"
         android:layout_gravity="center"
@@ -29,7 +31,10 @@
         android:layout_marginVertical="30dp"
         android:backgroundTint="#FFF44336"
         android:textSize="18sp"
-        android:text="Khó"/>
+        android:text="Khó"
+        app:layout_constraintTop_toBottomOf="@+id/Question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
         android:id="@+id/AnswerA"
         android:text="A"
@@ -44,7 +49,10 @@
         android:layout_marginHorizontal="15dp"
         android:layout_marginVertical="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/DoKho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
         android:id="@+id/AnswerB"
         android:text="B"
@@ -59,7 +67,10 @@
         android:background="@drawable/normal_op"
         android:layout_marginHorizontal="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/AnswerA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
         android:id="@+id/AnswerC"
         android:text="C"
@@ -74,7 +85,10 @@
         android:justificationMode="inter_word"
         android:background="@drawable/normal_op"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/AnswerB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
         android:id="@+id/AnswerD"
         android:text="D"
@@ -89,7 +103,10 @@
         android:background="@drawable/normal_op"
         android:layout_marginHorizontal="15dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/AnswerC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -103,5 +120,9 @@
         android:paddingBottom="8dp"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginTop="50dp" />
-</LinearLayout>
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/AnswerD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
