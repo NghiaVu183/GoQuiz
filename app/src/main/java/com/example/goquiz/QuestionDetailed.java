@@ -1,6 +1,7 @@
 package com.example.goquiz;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +34,9 @@ public class QuestionDetailed extends AppCompatActivity {
             level = "Khó";
         }
         binding.DoKho.setText(level);
+        if(dokho != 1) {
+            binding.DoKho.setBackgroundColor(Color.parseColor("#FF54FF25"));
+        }
 
         // Nhận các đáp án tùy chọn
         String[] tuychonn = intent.getStringArrayExtra("tuychon");
