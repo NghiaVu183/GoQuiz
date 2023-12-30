@@ -19,16 +19,20 @@ public class Result extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
+        // Nhận intent từ màn hình Ingame
         Intent intent = getIntent();
         String category1 = intent.getStringExtra("category");
         int level1 = intent.getIntExtra("level",0);
         int countRight = intent.getIntExtra("count",0);
         int score1 = intent.getIntExtra("score",0);
+
+        // Hiển thị điểm lần chơi đó
         binding.ScoreTitle.setText("Số câu trả lời đúng: " + countRight);
         binding.Score.setText(String.valueOf(score1));
-
+        // Cập nhật lại điểm số lưu trữ qua các lần chơi
         ScorePref.updateScore(this,score1);
 
+        // Sự kiện nút Chơi lại
         binding.ReplayButton.setOnClickListener(v -> {
             Intent intentReplay = new Intent(Result.this,Ingame.class);
             intentReplay.putExtra("category", category1);
@@ -36,11 +40,13 @@ public class Result extends AppCompatActivity {
             startActivity(intentReplay);
         });
 
+        // Sự kiện nút Hoàn thành
         binding.FinishButton.setOnClickListener(v -> {
             Intent intentFinish = new Intent(Result.this, MainActivity.class);
             startActivity(intentFinish);
         });
 
+        // Sự kiện nút Chia sẻ thành tích
         binding.ShareButton.setOnClickListener(v -> {
             String shareText = "Tôi đã đạt được " + score1 + " điểm trong GoQuiz!";
             Intent intentShare = new Intent(Intent.ACTION_SEND);

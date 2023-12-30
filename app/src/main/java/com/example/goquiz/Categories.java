@@ -36,6 +36,8 @@ public class Categories extends AppCompatActivity {
 
         CategoriesAdapter adapter = new CategoriesAdapter(categories);
         binding.CategoriesListView.setAdapter(adapter);
+
+        // Xử lý sự kiện khi nhấn vào danh sách chủ đề
         binding.CategoriesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -47,9 +49,11 @@ public class Categories extends AppCompatActivity {
             }
         });
 
+        // Lưu trữ điểm sau các lần chơi
         int total = ScorePref.saveScore(this);
         binding.score.setText(total + " pts");
 
+        // Chọn mức độ của câu hỏi
         binding.level.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
                 dokho = 1;
@@ -58,6 +62,7 @@ public class Categories extends AppCompatActivity {
             }
         });
 
+        // Sự kiện danh sách các câu hỏi
         binding.QuestionsButton.setOnClickListener(v -> {
             Intent intent1 = new Intent(Categories.this, QuestionList.class);
             startActivity(intent1);

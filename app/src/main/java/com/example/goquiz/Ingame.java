@@ -31,10 +31,12 @@ public class Ingame extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
+        // Lấy intent từ màn hình Result
         Intent intent = getIntent();
         category = intent.getStringExtra("category");
         level = intent.getIntExtra("level",0);
 
+        // Khởi tạo danh sách câu hỏi
         filteredQuestions = QuestionList.questionList();
         // Hàm để lấy danh sách câu hỏi dựa trên chủ đề và độ khó
         filteredQuestions = getQuestionsByCategoryAndDifficulty(category, level);
@@ -69,7 +71,7 @@ public class Ingame extends AppCompatActivity {
                 handleAnswer(currentQuestion,answerOptions);
                 binding.Answers.clearCheck();
             });
-        }else{ // Hết câu hỏi
+        }else{ // Nếu hết câu hỏi
             Toast.makeText(this, "Bạn đã trả lời hết câu hỏi!" , Toast.LENGTH_SHORT).show();
             toResult();
         }
